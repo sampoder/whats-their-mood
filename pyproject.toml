@@ -1,0 +1,10 @@
+[tool]
+[tool.poetry]
+name ="Hi"
+version ="1.0"
+authors = ["Your Name <you@example.com>"]
+[tool.poetry.dependencies]
+flask = "1.1.1"
+python = "^3.7"
+textblob = "^0.15.3"
+tweepy = "^3.8"

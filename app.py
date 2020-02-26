@@ -5,9 +5,10 @@ from tweepy import Cursor
 from datetime import datetime, date, time, timedelta
 from collections import Counter
 import sys
+import os
 from textblob import TextBlob
 app = Flask(__name__)
-
+os.system("python -m textblob.download_corpora")
 
 @app.route('/')
 def student():
@@ -16,10 +17,10 @@ def student():
 @app.route('/result',methods = ['POST', 'GET'])
 def result():
    if request.method == 'POST':
-       consumer_key = process.env.consumer_key
-       consumer_secret = process.env.consumer_secret
-       access_token = process.env.access_token
-       access_token_secret = process.env.access_token_secret
+       consumer_key = os.getenv("consumer_key")
+       consumer_secret = os.getenv("consumer_secret")
+       access_token = os.getenv("access_token")
+       access_token_secret = os.getenv("access_token_secret")
 
        auth = OAuthHandler(consumer_key, consumer_secret)
        auth.set_access_token(access_token, access_token_secret)
@@ -93,4 +94,4 @@ def result():
        ## return render_template("result.html", result=result)
 
 if __name__ == '__main__':
-   app.run(debug = True)
+   app.run(debug = True, host ="0.0.0.0")
