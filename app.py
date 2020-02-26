@@ -6,7 +6,6 @@ from datetime import datetime, date, time, timedelta
 from collections import Counter
 import sys
 from textblob import TextBlob
-import emoji
 app = Flask(__name__)
 
 
