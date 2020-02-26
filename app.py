@@ -16,10 +16,10 @@ def student():
 @app.route('/result',methods = ['POST', 'GET'])
 def result():
    if request.method == 'POST':
-       consumer_key = "gCaMZpJqN2qoOEoXYpFHj4ou4"
-       consumer_secret = "tTI2by4PXSwqfNYqiRuMnnV40q2LjFsEBN7QByFj1sCuYfQ7NX"
-       access_token = "954873614406270976-mhoMqQfcUSSmA1hI6gaFU9Ztabm8CnQ"
-       access_token_secret = "mRM2II4ObRhM1zv6kqKTdNVC7YGBA5dWmK8wpbFjdvdxA"
+       consumer_key = "YOUR CONSUMER KEY"
+       consumer_secret = "YOUR CONSUMER SECRET"
+       access_token = "YOUR ACCESS TOKEN"
+       access_token_secret = "YOUR ACCESS TOKEN SECRET"
 
        auth = OAuthHandler(consumer_key, consumer_secret)
        auth.set_access_token(access_token, access_token_secret)
