@@ -8,11 +8,11 @@ import sys
 import os
 from textblob import TextBlob
 app = Flask(__name__)
-os.system("python -m textblob.download_corpora")
 
 @app.route('/')
 def student():
-   return render_template('start.html')
+  os.system("python -m textblob.download_corpora")
+  return render_template('start.html')
 
 @app.route('/result',methods = ['POST', 'GET'])
 def result():
