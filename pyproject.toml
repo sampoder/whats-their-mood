@@ -5,7 +5,7 @@ name = "Hi"
 description = "Hi"
 version = "1.0"
 [tool.poetry.dependencies]
-flask = "1.1.1"
+flask = "2.3.2"
 python = "^3.8"
 textblob = "^0.15.3"
 tweepy = "^3.8"
